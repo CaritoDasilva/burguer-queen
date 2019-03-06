@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MenuService } from 'src/app/services/menu.service';
+
 
 @Component({
   selector: 'app-board-order',
@@ -7,9 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BoardOrderComponent implements OnInit {
 
-  constructor() { }
+  constructor (private menuService: MenuService) { }
 
   ngOnInit() {
+    this.menuService.getRestaurantMenu().subscribe((data: any) =>
+      console.log(data));
   }
 
 }
