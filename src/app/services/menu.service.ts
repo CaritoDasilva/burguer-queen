@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-import { MenuModel } from '../models/menu-model';
+import { MenuRestaurant } from '../models/menu-model';
 
 @Injectable({
   providedIn: 'root'
@@ -13,6 +13,6 @@ export class MenuService {
 
   getRestaurantMenu() {
     // Mock: Comment or Remove it when a real server is ready to receive requests
-    return this.http.get<MenuModel[]>(this.menuRestaurantUrl).pipe();
+    return this.http.get<MenuRestaurant[]>(this.menuRestaurantUrl).pipe();
   }
 }

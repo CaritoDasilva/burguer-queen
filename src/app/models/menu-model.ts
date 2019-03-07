@@ -1,4 +1,4 @@
-export class MenuModel {
+export class MenuRestaurant {
 
     id: number;
     name: string;

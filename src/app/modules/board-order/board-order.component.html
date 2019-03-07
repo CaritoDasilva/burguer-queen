@@ -1,3 +1,7 @@
-<p>
-  burguer queen is open!
-</p>
+<div *ngFor="let item of menuList">
+    <mz-card class="cardMenu">
+        <mz-card-content>
+            {{item.name}}
+        </mz-card-content>
+    </mz-card>
+</div>

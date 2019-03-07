@@ -3,13 +3,15 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
-
 // Mock: Comment or Remove it when a real server is ready to receive requests
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './mocks/in-memory-data.service';
 import { HttpClientModule } from '@angular/common/http';
 import { BoardOrderComponent } from './modules/board-order/board-order.component';
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatCardModule } from '@angular/material/card';
+import { MzCardModule } from 'ngx-materialize';
 
 @NgModule({
   declarations: [
@@ -29,6 +31,9 @@ import { BoardOrderComponent } from './modules/board-order/board-order.component
       }
     ),
     HttpClientModule,
+    BrowserAnimationsModule,
+    MatCardModule,
+    MzCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
